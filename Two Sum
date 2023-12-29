@@ -32,15 +32,13 @@ Only one valid answer exists. */
 
 ##Solution:
 
-'class Solution:
+class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        vis={}
-        numLen=len(nums)
-        for currIdx in range(numLen):
-            remaining=target-nums[currIdx]
-            if remaining in vis:
-                return[vis[remaining],currIdx]
-            else:
-                vis[nums[currIdx]]=currIdx'
+        comple={}
+        for i in range(len(nums)):
+            c=target-nums[i]
+            if nums[i] in comple:
+                return comple[nums[i]],i
+            comple[c]=i
 
         
